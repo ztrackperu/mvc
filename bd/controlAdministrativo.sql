@@ -441,7 +441,6 @@ CREATE TABLE h_insumo (
     part_number_3 varchar(50) DEFAULT NULL ,
     part_number_4 varchar(50) DEFAULT NULL ,
     marca varchar(50) DEFAULT NULL ,
-    ubicacion varchar(50) DEFAULT NULL ,
     rack varchar(50) DEFAULT NULL ,
     anaquel varchar(50) DEFAULT NULL ,
     ubicacion varchar(50) DEFAULT NULL ,

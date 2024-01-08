@@ -36,7 +36,7 @@
             <!--Notification Menu-->
             <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
                 <ul class="app-notification dropdown-menu dropdown-menu-right">
-                    <li class="app-notification__title">Libros no entregados.</li>
+                    <li class="app-notification__title">General</li>
                     <div class="app-notification__content">
                         <li id="nombre_estudiante">
                             
