@@ -46,7 +46,7 @@
 <script type="text/javascript" src="<?php echo base_url; ?>Assets/js/vfs_fonts.js"></script>
 <script type="text/javascript" src="<?php echo base_url; ?>Assets/js/datatables.min.js"></script>
 <script src="<?php echo base_url; ?>Assets/js/select2.min.js"></script>
-<script src="<?php echo base_url; ?>Assets/js/funciones.js"></script>
+<!-- <script src="<?php echo base_url; ?>Assets/js/funciones.js"></script> -->
 
 <!-- Google analytics script-->
 <script type="text/javascript">
@@ -66,6 +66,28 @@
         ga('send', 'pageview');
     }
 </script>
+
+<script>
+    const ruta = '<?php echo base_url; ?>';
+</script>
+
+<?php
+
+if(!empty($_GET['url'])){
+    $script =$_GET['url'].'.js';
+    if(file_exists('assets/js/'.$script)){
+
+        echo '<script src="'.base_url.'assets/js/'.$script.'"></script>';
+
+    }
+    else{
+        echo "no reconocido";
+    }
+}else{
+    echo '<script src="'.base_url.'Assets/js/login.js"></script>';
+}
+
+  ?>
 </body>
 
 </html>
