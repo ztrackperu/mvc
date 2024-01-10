@@ -21,6 +21,7 @@
     }
     require_once "Config/App/Autoload.php";
     $dirControllers = "Controllers/".$controller.".php";
+    $globalController = " no tengo ni idea de lo que estoy haciendo";
     if (file_exists($dirControllers)) {
         
         require_once $dirControllers;

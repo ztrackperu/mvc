@@ -21,7 +21,7 @@ function frmLogin(e) {
             if (this.readyState == 4 && this.status == 200) {
                 const res = JSON.parse(this.responseText);
                 if (res.icono == "success") {
-                    window.location = base_url + "Configuracion/admin";
+                    window.location = base_url + "Area";
                 } else {
                     document.getElementById("alerta").classList.remove("d-none");
                     document.getElementById("alerta").innerHTML = res.msg;

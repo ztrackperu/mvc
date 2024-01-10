@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", function(){
             cache: true
         }
     });
-
+/*
     if (document.getElementById('nombre_estudiante')) {
         const http = new XMLHttpRequest();
         const url = base_url + 'Configuracion/verificar';
@@ -392,6 +392,8 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         }
     }
+
+    */
 })
 
 function frmUsuario() {

@@ -48,24 +48,28 @@
 <script src="<?php echo base_url; ?>Assets/js/select2.min.js"></script>
 <script src="<?php echo base_url; ?>Assets/js/funciones.js"></script>
 
-<!-- Google analytics script-->
-<script type="text/javascript">
-    if (document.location.hostname == 'pratikborsadiya.in') {
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-72504830-1', 'auto');
-        ga('send', 'pageview');
+<script>
+    const ruta = '<?php echo base_url; ?>';
+// ruta para que se eejecute el mendsaje de acuerdo al color correspondiente a la accion 
+// verde cunado la accion se ha realizado correctamente y rojo cunado la accion no ha encontrado respuesta positiva
+    function message(tipo, mensaje) {
+        Snackbar.show({
+            text: mensaje,
+            pos: 'top-right',
+            backgroundColor: tipo == 'success' ? '#079F00' : '#FF0303',
+            actionText: 'Cerrar'
+        });
     }
 </script>
+<?php
+if (!empty($_GET['url'])) {
+    $script = $_GET['url'] . '.js';
+    if (file_exists('assets/js/' . $script)) {
+        echo '<script src="'. base_url . 'assets/js/' . $script .'"></script>';
+    }
+}else{
+    echo '<script src="'. base_url . 'assets/js/login.js"></script>';
+} ?>
 </body>
 
 </html>
