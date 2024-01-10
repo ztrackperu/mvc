@@ -1,0 +1,1 @@
+console.log ("desde assets 2");
